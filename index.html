@@ -1,40 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu blog artístico</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLOG ARTÍSTICO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="title-wrap">
+      <img src="https://cdn-icons-png.flaticon.com/512/1987/1987925.png" alt="Logo" class="site-logo" />
+      <h1 class="site-title">BLOG ARTÍSTICO</h1>
+      <img src="https://media.tenor.com/HXlgq9gTCi4AAAAC/abel-mundo-do-torajo.gif" alt="Gif do Torajo" class="title-gif" />
+    </div>
+    <p class="site-subtitle">Minha galeria — clique no coração para curtir ou na imagem para ampliar</p>
+    <div class="header-controls">
+      <div class="font-size-controls" aria-label="Ajustar tamanho da fonte">
+        <button id="font-decrease" class="font-btn" type="button" aria-label="Diminuir texto">A-</button>
+        <button id="font-increase" class="font-btn" type="button" aria-label="Aumentar texto">A+</button>
+      </div>
+      <button id="announcement-toggle" class="theme-toggle" type="button" aria-expanded="false">!</button>
+      <button id="read-page" class="theme-toggle" type="button">Ler página</button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Ativar modo escuro</button>
+    </div>
+  </header>
 
-<header>
-<div class="logo-container">
-<i class="fa-solid fa-palette logo-icon"></i>
-<h1>Meu blog artístico</h1>
-</div>
-</header>
+  <div id="announcement-panel" class="announcement-panel" aria-hidden="true">
+    <div class="announcement-card">
+      <button type="button" class="announcement-close" aria-label="Fechar aviso">✕</button>
+      <p>Atualizo desenhos novos aqui a cada 3 meses! Obrigada por se interessar :)</p>
+      <img src="https://media.tenor.com/jG1NiGEt3bgAAAAd/mundo-torajo.gif" alt="Mundo Torajo GIF" class="announcement-gif" />
+    </div>
+  </div>
 
-<main class="container">
-<article class="post-card">
-<div class="post-header">
-<h2>Meu primeiro post</h2>
-<span class="author">Por Yasmin Livia</span>
-</div>
+  <main class="container">
+    <section class="gallery" aria-label="Galeria de desenhos">
+      
+      <article class="card" data-id="img-1" data-index="0">
+        <figure class="card-media">
+          <img src="images/image1.png" alt="Desenho de uma garota chorando olhando para um espelho quebrado" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Reflexo</h2>
+          <p class="card-desc">Um desenho que representa a comparação, do sentimento da inveja, nunca sentir bem como sou e sempre desejar ser alguém que nunca vou ser.</p>
+          <div class="card-actions">
+            <button class="like-btn" aria-pressed="false" aria-label="Curtir Imagem 1">
+              <span class="heart" aria-hidden="true">❤</span>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+      </article>
 
-<p class="post-content">
-Boas vindas ao meu primeiro blog! Aqui vou compartilhar algumas artes minhas e curiosidade sobre a aréa artística e fatos legais sobre mim!
-</p>
+      <article class="card" data-id="img-2" data-index="1">
+        <figure class="card-media">
+          <img src="images/image2.png" alt="Arte abstrata e expressiva em tons de rosa, roxo e azul" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Expressão</h2>
+          <p class="card-desc">Um desenho que eu desenhei para aliviar minha angústia, expressando também desespero, medo, traumas e desconforto visual.</p>
+          <div class="card-actions">
+            <button class="like-btn" aria-pressed="false" aria-label="Curtir Imagem 2">
+              <span class="heart" aria-hidden="true">❤</span>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+      </article>
 
-<div class="post-footer">
-<button class="like-btn" id="likeBtn">
-<i class="fa-solid fa-heart"></i> <span>0</span>
-</button>
-</div>
-</article>
-</main>
+      <article class="card" data-id="img-3" data-index="2">
+        <figure class="card-media">
+          <img src="images/image3.png" alt="Desenho dividido ao meio mostrando duas dualidades ou sentimentos da mesma pessoa" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Dualidade</h2>
+          <p class="card-desc">Desenho que representa a comparação e baixa autoestima que eu sentia antes de terminar a transição capilar.</p>
+          <div class="card-actions">
+            <button class="like-btn" aria-pressed="false" aria-label="Curtir Imagem 3">
+              <span class="heart" aria-hidden="true">❤</span>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+      </article>
 
-<script src="script.js"></script>
+      <article class="card" data-id="img-4" data-index="3">
+        <figure class="card-media">
+          <img src="images/Captura de tela 2026-06-18 170735.png" alt="Desenho de personagem com chifres chorando lágrimas douradas e segurando uma estrela" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Lágrimas de Estrela</h2>
+          <p class="card-desc">Alien tendo sentimentos confusos e embolados.</p>
+          <div class="card-actions">
+            <button class="like-btn" aria-pressed="false" aria-label="Curtir Imagem 4">
+              <span class="heart" aria-hidden="true">❤</span>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      
+    </section>
+  </main>
+
+  <section class="quiz-section">
+    <div class="container">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <h2>Você realmente sabe sobre desenhos/desenhar?</h2>
+          <p>Teste seus conhecimentos com perguntas simples sobre desenho.</p>
+        </div>
+        <button id="quiz-start" class="quiz-start-btn" type="button">Começar Quiz</button>
+        <div id="quiz-box" class="quiz-box hidden" aria-live="polite">
+          <div class="quiz-meta">
+            <span id="quiz-progress">Pergunta 1 de 5</span>
+          </div>
+          <div id="quiz-question" class="quiz-question"></div>
+          <div id="quiz-options" class="quiz-options"></div>
+          <button id="quiz-next" class="quiz-next-btn" type="button" disabled>Próxima</button>
+        </div>
+        <div id="quiz-result" class="quiz-result hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comments-section">
+    <div class="container">
+      <h2 class="comments-title">Deixe um Comentário</h2>
+      <form id="comment-form" class="comment-form">
+        <div class="form-group">
+          <input type="text" id="comment-name" class="comment-input" placeholder="Seu nome" maxlength="50" required />
+        </div>
+        <div class="form-group">
+          <textarea id="comment-text" class="comment-textarea" placeholder="Compartilhe seu feedback..." rows="4" maxlength="500" required></textarea>
+          <span class="char-count"><span id="char-used">0</span>/500</span>
+        </div>
+        <button type="submit" class="submit-btn">Enviar Comentário</button>
+      </form>
+      <div id="comments-list" class="comments-list"></div>
+    </div>
+  </section>
+
+  <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-overlay" data-close="true"></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fechar (Esc)">✕</button>
+      <a id="modal-download" class="modal-download" role="button" aria-label="Baixar imagem" download>Baixar</a>
+      <button class="modal-prev" aria-label="Imagem anterior" title="Anterior">◀</button>
+      <div class="modal-figure">
+        <img id="modal-image" src="" alt="" />
+        <figcaption id="modal-caption"></figcaption>
+      </div>
+      <button class="modal-next" aria-label="Próxima imagem" title="Próxima">▶</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <small>© BLOG ARTÍSTICO — Torajo Programador</small>
+    <p class="footer-instagram">Siga no Instagram: <a href="https://www.instagram.com/yasminlivia023" target="_blank" rel="noopener noreferrer">@yasminlivia023</a></p>
+  </footer>
+
+  <div class="end-gif-container">
+    <img src="https://media.tenor.com/-FjM4ppY9X4AAAAC/mundo-torajo-abel.gif" alt="Gif final Mundo Torajo" class="end-gif" />
+  </div>
+
+  <audio id="background-audio" preload="none" loop src="audio/Impostor%20Syndrome%20-%20Sidney%20Gish.mp3"></audio>
+  <button id="audio-toggle-btn" class="audio-toggle-btn" type="button" aria-pressed="false" aria-label="Tocar trilha sonora">▶</button>
+  <button id="scroll-top-btn" class="scroll-top-btn" type="button" aria-label="Ir para o topo">▲</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
