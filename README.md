@@ -1,4 +1,4 @@
-Markdown
+
 # Meu Blog Artístico 🎨
 
 Este é o projeto inicial do meu blog pessoal focado em arte, curiosidades e vivências do mundo artístico. Desenvolvido com uma interface minimalista, elegante e com paleta de cores acolhedora destacando o amarelo dourado queimado.
