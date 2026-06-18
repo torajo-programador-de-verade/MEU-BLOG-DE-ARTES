@@ -17,7 +17,7 @@ Este é o projeto inicial do meu blog pessoal focado em arte, curiosidades e viv
 - **Font Awesome:** Ícones vetoriais modernos.
 
 ## 📂 Como executar o projeto
-
+- Clique no link que está disponível aqui neste projeto, ou:
 1. Baixe ou clone este repositório.
 2. Certifique-se de manter os arquivos `index.html`, `style.css` e `script.js` na mesma pasta.
 3. Abra o arquivo `index.html` em qualquer navegador de sua preferência.
