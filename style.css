@@ -1,0 +1,107 @@
+/* Reset básico e fontes */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: #f9f6f0; /* Fundo off-white suave */
+color: #333;
+line-height: 1.6;
+}
+
+/* Header / Topo */
+header {
+background-color: #ffffff;
+padding: 2rem 1rem;
+text-align: center;
+border-bottom: 4px solid #c99212; /* Amarelo dourado queimado */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.5rem;
+}
+
+.logo-icon {
+font-size: 3rem;
+color: #c99212; /* Amarelo dourado queimado */
+}
+
+header h1 {
+font-size: 2.2rem;
+color: #222;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+/* Conteúdo Principal */
+.container {
+max-width: 800px;
+margin: 3rem auto;
+padding: 0 1rem;
+}
+
+/* Card do Post */
+.post-card {
+background: #ffffff;
+padding: 2.5rem;
+border-radius: 12px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+border-left: 5px solid #c99212;
+}
+
+.post-header {
+margin-bottom: 1.5rem;
+}
+
+.post-header h2 {
+font-size: 1.8rem;
+color: #222;
+margin-bottom: 0.3rem;
+}
+
+.author {
+font-style: italic;
+color: #666;
+font-size: 0.95rem;
+}
+
+.post-content {
+font-size: 1.1rem;
+color: #444;
+margin-bottom: 2rem;
+}
+
+/* Botão de Coração (Like) */
+.like-btn {
+background-color: #ffffff;
+border: 2px solid #e74c3c;
+color: #e74c3c;
+padding: 0.6rem 1.2rem;
+font-size: 1rem;
+border-radius: 25px;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.like-btn:hover {
+background-color: #e74c3c;
+color: #ffffff;
+transform: scale(1.05);
+}
+
+.like-btn.liked {
+background-color: #e74c3c;
+color: #ffffff;
+box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
